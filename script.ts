@@ -18,7 +18,9 @@ const checkButton = document
         .value;
       if (guess === secretNumber) {
         document.querySelector('.message')!.textContent = '🎉 Correct Number!';
-        score = score + 10;
+        document.querySelector('.highscore')!.textContent = String(score);
+        document.querySelector('body')!.style.backgroundColor = '#60b347';
+        document.querySelector('numer')!.style.width = '30rem';
       }
       if (guess > secretNumber) {
         document.querySelector('.message')!.textContent = '📈 Too High!';
