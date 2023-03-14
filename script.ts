@@ -20,7 +20,7 @@ const checkButton = document
         document.querySelector('.message')!.textContent = '🎉 Correct Number!';
         document.querySelector('.highscore')!.textContent = String(score);
         document.querySelector('body')!.style.backgroundColor = '#60b347';
-        document.querySelector('numer')!.style.width = '30rem';
+        (document.querySelector('numer') as HTMLElement)!.style.width = '30rem';
       }
       if (guess > secretNumber) {
         document.querySelector('.message')!.textContent = '📈 Too High!';
